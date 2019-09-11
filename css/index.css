@@ -134,3 +134,75 @@ html,
 body {
   height: 100%;
 }
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header {
+  height: 20vh;
+  padding-top: 10px;
+  padding-left: 15px;
+  background: #fdbae3;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .logo-container img {
+  width: 15%;
+}
+nav .links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+nav .links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2979bf;
+}
+#intro {
+  margin: 0 auto;
+  padding: 20px 0px 30px 0px;
+  text-align: center;
+  background: #b9f9b1;
+}
+#intro img {
+  border-radius: 100%;
+  width: 15%;
+  height: auto;
+}
+#intro .intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutMe div {
+  display: flex;
+  flex-wrap: wrap;
+}
+#experience div {
+  display: flex;
+  justify-content: space-between;
+}
+#experience table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+#experience table td,
+#experience table th {
+  border: 1px solid magenta;
+  text-align: center;
+  padding: 8px;
+}
+#experience table tr:nth-child(odd) {
+  background-color: lightpink;
+}
