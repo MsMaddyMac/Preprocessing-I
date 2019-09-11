@@ -150,20 +150,20 @@ header {
   padding-left: 15px;
   background: #fdbae3;
 }
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
 }
-nav .logo-container img {
+header nav .logo-container img {
   width: 15%;
 }
-nav .links {
+.links {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-nav .links a {
+.links a {
   text-decoration: none;
   font-weight: bold;
   color: #2979bf;
@@ -188,21 +188,21 @@ nav .links a {
   display: flex;
   flex-wrap: wrap;
 }
-#experience div {
+.experience-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
-#experience table {
+.experience-content table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 50%;
 }
-#experience table td,
-#experience table th {
+.experience-content table td,
+.experience-content table th {
   border: 1px solid magenta;
   text-align: center;
   padding: 8px;
 }
-#experience table tr:nth-child(odd) {
+.experience-content table tr:nth-child(odd) {
   background-color: lightpink;
 }
