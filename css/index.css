@@ -130,79 +130,181 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-}
+/* size formatting */
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 h2 {
   font-size: 20px;
 }
+body,
+html {
+  width: 100%;
+}
 body {
-  padding-left: 15px;
-  padding-right: 15px;
+  background: #f9f973bf;
 }
-header {
-  height: 20vh;
-  padding-top: 10px;
-  padding-left: 15px;
+/* size formatting */
+/*mixins*/
+/*mixins*/
+/* header section */
+nav {
   background: #fdbae3;
-}
-header nav {
   display: flex;
   justify-content: space-between;
 }
-header nav .logo-container img {
-  width: 15%;
+nav .logo-container {
+  width: 100%;
 }
-.links {
+nav .logo-container img {
+  width: 30%;
+  padding: 10px 10px 10px 10px;
+}
+nav .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   align-items: center;
 }
-.links a {
+nav .links a {
   text-decoration: none;
-  font-weight: bold;
-  color: #2979bf;
+  color: #0079be;
+  font-size: 20px;
+  width: 100%;
 }
+nav .links a:hover {
+  color: #f1faff;
+}
+/* end of header section */
+/* intro section */
 #intro {
   margin: 0 auto;
-  padding: 20px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
   text-align: center;
-  background: #b9f9b1;
+  background: #8596fe;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 #intro img {
-  border-radius: 100%;
-  width: 15%;
-  height: auto;
+  width: 25%;
+  border-radius: 50%;
+  border: 3px solid white;
 }
-#intro .intro-container {
+#intro h1 {
+  line-height: 2;
+  color: #fe9cd9;
+}
+#intro .introText {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border: 3px solid white;
+  width: 40%;
+  padding: 10px 0px 15px 0px;
 }
-#aboutMe div {
+#intro .introText p {
+  padding: 15px;
+  color: #e8f3dc;
+}
+#intro .introText a {
+  padding: 8px 24px;
+  background: #fe9cd9;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8593d4;
+  border-radius: 4px;
+  width: 25%;
+  text-decoration: none;
+  margin: 0 auto;
+}
+#intro .introText a:hover {
+  background: #f9f973bf;
+  color: magenta;
+}
+/* end of .intro section */
+/* aboutMe section */
+#aboutMe {
+  background: #ade4a6;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 40px;
+}
+#aboutMe .who {
+  border: 3px solid white;
+  width: 35%;
+  padding: 10px 25px 10px 25px;
+  line-height: 1.5;
+  color: #0079be;
+}
+#aboutMe .who h2 {
+  text-align: center;
+  font-weight: bold;
+}
+#aboutMe .awesomeAt {
+  border: 3px solid white;
+  width: 35%;
+  padding: 10px 25px 10px 25px;
+  line-height: 1.5;
+  color: #0079be;
+}
+#aboutMe .awesomeAt h2 {
+  text-align: center;
+  font-weight: bold;
+}
+#aboutMe .awesomeAt ul {
+  list-style-type: circle;
+}
+/* end of aboutMe section */
+/* experience section */
+#experience {
+  color: #0079be;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  width: 80%;
+  height: 40%;
+  margin: 0 auto;
 }
-.experience-content {
-  display: flex;
-  flex-direction: column;
+#experience div h2 {
+  padding: 10px;
 }
-.experience-content table {
+#experience div table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
 }
-.experience-content table td,
-.experience-content table th {
+#experience div table .tableHead {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#experience div table td,
+#experience div table th {
   border: 1px solid magenta;
   text-align: center;
   padding: 8px;
 }
-.experience-content table tr:nth-child(odd) {
-  background-color: lightpink;
+#experience div table tr:nth-child(odd) {
+  background: lightpink;
 }
+/* end of experience section */
+/* contact section */
+#contact {
+  text-align: center;
+  color: magenta;
+}
+/* end of contact section */
+/* footer section */
+footer {
+  background: #938b5e;
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+}
+/* end of footer section */

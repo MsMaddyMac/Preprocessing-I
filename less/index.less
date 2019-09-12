@@ -1,4 +1,4 @@
-// Is this working?
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,95 +53,196 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-}
-.flex-container(){
-	display: flex;
-	justify-content: space-between;
-}
-
-h1 {
-	font-size: 30px;
+/* size formatting */
+h1{
+	font-size: 25px;
 }
 h2{
 	font-size: 20px;
 }
-body{
-	padding-left: 15px;
-	padding-right:15px;
+
+body, html{
+	width: 100%;
 }
-header{
-	height: 20vh;
-	padding-top: 10px;
-	padding-left: 15px;
+body{
+	background: #f9f973bf;
+}
+
+/* size formatting */
+
+/*mixins*/
+.aboutMe-content(){
+	border: 3px solid white;
+	width: 35%;
+	padding: 10px 25px 10px 25px;
+	line-height: 1.5;
+	color: #0079be;
+}
+.aboutMe-heading(){
+	text-align: center;
+	font-weight: bold;
+}
+/*mixins*/
+
+/* header section */
+nav{
 	background: #fdbae3;
-
-	nav{	
-		.flex-container();
-
-		.logo-container{
-			img{
-				width: 15%;
+	display: flex;
+	justify-content: space-between;
+	.logo-container{
+		width: 100%;
+		img{
+			width: 30%;
+			padding: 10px 10px 10px 10px;
+		}
+	}
+	.links{
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		align-items: center;
+		a{
+			text-decoration: none;
+			color: #0079be;
+			font-size: 20px;
+			width: 100%;
+			&:hover{
+				color: lighten(#0079be, 60%);
 			}
 		}
 	}
 }
+/* end of header section */
 
-.links {
-	.flex-container();
-	width: 100%;
-	align-items: center;
-
-	a{
-		text-decoration: none;
-		font-weight: bold;
-		color: #2979bf;
-	}
-}
-
+/* intro section */
 #intro{
-
 	margin: 0 auto;
-	padding: 20px 0px 30px 0px;
+	padding: 30px 0px 30px 0px;
 	text-align: center;
-	background: #b9f9b1;
-
-	img{
-		border-radius: 100%;
-		width: 15%;
-		height: auto;
-	}
-	.intro-container{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
-#aboutMe{
-	div{
-		display: flex;
-		flex-wrap: wrap;
-	}
-}
-
-.experience-content{
-	display: flex;
+	background: #8596fe;
+	width: 100%;
 	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 
-	table {
-	font-family: arial, sans-serif;
-	border-collapse: collapse;
-	width: 50%;
-
-	td, th {
-		border: 1px solid magenta;
-		text-align: center;
-		padding: 8px;
+		img{
+		width:25%;
+		border-radius: 50%;
+		border: 3px solid white;
 	}
-	tr:nth-child(odd){
-		background-color: lightpink;
+		h1{
+			line-height: 2;
+			color: #fe9cd9;
+		}
+		.introText{
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			border: 3px solid white;
+			width: 40%;
+			padding: 10px 0px 15px 0px;
+			p{
+				padding: 15px;
+				color: #e8f3dc;
+			}
+			
+			a{
+				padding: 8px 24px;
+				background:  #fe9cd9;
+				font-size: 12px;
+				font-weight: bold;
+				color: #8593d4;
+				border-radius: 4px;
+				width: 25%;
+				text-decoration: none;
+				margin: 0 auto;
+				&:hover{
+					background: #f9f973bf;
+					color: magenta;
+				}
+			}
+		}
+}
+/* end of .intro section */
+
+/* aboutMe section */
+#aboutMe{
+	background: #ade4a6;
+	display: flex;
+	justify-content: space-around;
+	padding: 40px 40px;
+	.who{
+		.aboutMe-content();
+		h2{
+			.aboutMe-heading();
+		}
+	}
+	.awesomeAt{
+		.aboutMe-content();
+		h2{
+			.aboutMe-heading();	
+		}
+		ul{
+			list-style-type: circle;
 		}
 	}
 }
+
+/* end of aboutMe section */
+
+/* experience section */
+#experience{
+	color: #0079be;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 40px;
+	width: 80%;
+	height: 40%;
+	margin: 0 auto;
+
+	div{		
+		h2{
+			padding: 10px;
+		}
+		table{
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			.tableHead{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+			}
+			td, th{
+				border: 1px solid magenta;
+				text-align: center;
+				padding: 8px;
+			}
+			tr:nth-child(odd){
+				background: lightpink;
+			}
+		}
+	}
+}
+/* end of experience section */
+
+/* contact section */
+#contact{
+	text-align: center;
+	color: magenta;
+}
+
+/* end of contact section */
+
+/* footer section */
+footer{
+	background: #938b5e;
+	color: white;
+	text-align: center;
+	margin-top: 2%;
+}
+/* end of footer section */
