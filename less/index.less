@@ -50,7 +50,10 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 /* size formatting */
@@ -82,32 +85,61 @@ body{
 	text-align: center;
 	font-weight: bold;
 }
+
+.media-display(){
+	justify-content: center;
+	align-content: center;
+	display: flex;
+}
+
+.media-display2(){
+	border: none;
+	width: 100%;
+	padding: 0;
+}
 /*mixins*/
 
 /* header section */
-nav{
-	background: #fdbae3;
-	display: flex;
-	justify-content: space-between;
-	.logo-container{
-		width: 100%;
-		img{
-			width: 30%;
-			padding: 10px 10px 10px 10px;
-		}
-	}
-	.links{
+header{
+	
+	nav{
+		background: #fdbae3;
 		display: flex;
-		justify-content: space-evenly;
-		width: 100%;
-		align-items: center;
-		a{
-			text-decoration: none;
-			color: #0079be;
-			font-size: 20px;
+		justify-content: space-between;
+
+		@media (max-width: 500px){
+			display: flex;
+			flex-direction: column;
+		}
+
+		.logo-container{
 			width: 100%;
-			&:hover{
-				color: lighten(#0079be, 60%);
+
+			img{
+				width: 30%;
+				padding: 10px 10px 10px 10px;
+			}
+
+			@media (max-width: 500px){
+				.media-display();
+			}
+		}
+		.links{
+			display: flex;
+			justify-content: space-evenly;
+			width: 100%;
+			align-items: center;
+			a{
+				text-decoration: none;
+				color: #0079be;
+				font-size: 20px;
+				width: 100%;
+				&:hover{
+					color: lighten(#0079be, 60%);
+				}
+				@media (max-width: 500px){
+					.media-display();
+				}
 			}
 		}
 	}
@@ -129,10 +161,19 @@ nav{
 		width:25%;
 		border-radius: 50%;
 		border: 3px solid white;
+
+		@media (max-width: 500px){
+			width: 50%;
+		}
 	}
 		h1{
 			line-height: 2;
 			color: #fe9cd9;
+
+			@media (max-width: 500px){
+				line-height: 1;
+				margin-top: 10px;
+			}
 		}
 		.introText{
 			margin: 0 auto;
@@ -144,6 +185,10 @@ nav{
 			p{
 				padding: 15px;
 				color: #e8f3dc;
+
+				@media (max-width: 500px){
+					font-size: 18px;
+				}
 			}
 			
 			a{
@@ -160,6 +205,17 @@ nav{
 					background: #f9f973bf;
 					color: magenta;
 				}
+
+				@media (max-width: 500px){
+					width: 50%;
+					font-size: 16px;
+					margin-top: 20px;
+				}
+			}
+
+			@media (max-width: 500px){
+				width: 80%;
+				border: none;
 			}
 		}
 }
@@ -176,6 +232,10 @@ nav{
 		h2{
 			.aboutMe-heading();
 		}
+
+		@media (max-width: 500px){
+			.media-display2();
+		}
 	}
 	.awesomeAt{
 		.aboutMe-content();
@@ -185,6 +245,15 @@ nav{
 		ul{
 			list-style-type: circle;
 		}
+
+		@media (max-width: 500px){
+		.media-display2();
+		margin-top: 25px;
+		}
+	}
+
+	@media (max-width: 500px){
+		flex-direction: column;
 	}
 }
 
@@ -205,6 +274,11 @@ nav{
 	div{		
 		h2{
 			padding: 10px;
+			
+			@media (max-width: 500px){
+				text-align: center;
+				margin-top: 20px;
+			}
 		}
 		table{
 			font-family: arial, sans-serif;
@@ -227,6 +301,11 @@ nav{
 			}
 		}
 	}
+
+	@media (max-width: 500px){
+		padding: 0;
+		margin-bottom: 20px;
+	}
 }
 /* end of experience section */
 
@@ -234,6 +313,10 @@ nav{
 #contact{
 	text-align: center;
 	color: magenta;
+
+	@media (max-width: 500px){
+		margin-bottom: 30px;
+	}
 }
 
 /* end of contact section */
