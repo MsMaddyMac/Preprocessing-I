@@ -1,1 +1,399 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* size formatting */
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 20px;
+}
+body,
+html {
+  width: 100%;
+}
+body {
+  background: #f9f973bf;
+}
+/* size formatting */
+/*mixins*/
+/*mixins*/
+/* header section */
+header nav {
+  background: #fdbae3;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+header nav .logo-container {
+  width: 100%;
+}
+header nav .logo-container img {
+  width: 30%;
+  padding: 10px 10px 10px 10px;
+}
+@media (max-width: 500px) {
+  header nav .logo-container {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
+}
+header nav .links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+header nav .links a {
+  text-decoration: none;
+  color: #0079be;
+  font-size: 20px;
+  width: 100%;
+}
+header nav .links a:hover {
+  color: #f1faff;
+}
+@media (max-width: 500px) {
+  header nav .links a {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
+}
+/* end of header section */
+/* intro section */
+#intro {
+  margin: 0 auto;
+  padding: 30px 0px 30px 0px;
+  text-align: center;
+  background: #8596fe;
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+#intro img {
+  width: 25%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+@media (max-width: 500px) {
+  #intro img {
+    width: 50%;
+  }
+}
+#intro h1 {
+  line-height: 2;
+  color: #fe9cd9;
+}
+@media (max-width: 500px) {
+  #intro h1 {
+    line-height: 1;
+    margin-top: 10px;
+  }
+}
+#intro .introText {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  width: 40%;
+  padding: 10px 0px 15px 0px;
+}
+#intro .introText p {
+  padding: 15px;
+  color: #e8f3dc;
+}
+@media (max-width: 500px) {
+  #intro .introText p {
+    font-size: 18px;
+  }
+}
+#intro .introText a {
+  padding: 8px 24px;
+  background: #fe9cd9;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8593d4;
+  border-radius: 4px;
+  width: 25%;
+  text-decoration: none;
+  margin: 0 auto;
+}
+#intro .introText a:hover {
+  background: #f9f973bf;
+  color: magenta;
+}
+@media (max-width: 500px) {
+  #intro .introText a {
+    width: 50%;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  #intro .introText {
+    width: 80%;
+    border: none;
+  }
+}
+/* end of .intro section */
+/* aboutMe section */
+#aboutMe {
+  background: #ade4a6;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 40px;
+}
+#aboutMe .who {
+  border: 3px solid white;
+  width: 35%;
+  padding: 10px 25px 10px 25px;
+  line-height: 1.5;
+  color: #0079be;
+}
+#aboutMe .who h2 {
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  #aboutMe .who {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+#aboutMe .awesomeAt {
+  border: 3px solid white;
+  width: 35%;
+  padding: 10px 25px 10px 25px;
+  line-height: 1.5;
+  color: #0079be;
+}
+#aboutMe .awesomeAt h2 {
+  text-align: center;
+  font-weight: bold;
+}
+#aboutMe .awesomeAt ul {
+  list-style-type: circle;
+}
+@media (max-width: 500px) {
+  #aboutMe .awesomeAt {
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 500px) {
+  #aboutMe {
+    flex-direction: column;
+  }
+}
+/* end of aboutMe section */
+/* experience section */
+#experience {
+  color: #0079be;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  width: 80%;
+  height: 40%;
+  margin: 0 auto;
+}
+#experience div h2 {
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  #experience div h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+#experience div table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#experience div table .tableHead {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#experience div table td,
+#experience div table th {
+  border: 1px solid magenta;
+  text-align: center;
+  padding: 8px;
+}
+#experience div table tr:nth-child(odd) {
+  background: lightpink;
+}
+@media (max-width: 500px) {
+  #experience {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+/* end of experience section */
+/* contact section */
+#contact {
+  text-align: center;
+  color: magenta;
+}
+@media (max-width: 500px) {
+  #contact {
+    margin-bottom: 30px;
+  }
+}
+/* end of contact section */
+/* footer section */
+footer {
+  background: #938b5e;
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+}
+/* end of footer section */
